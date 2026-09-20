@@ -69,7 +69,14 @@
                 <!-- Este redirecciona a un video de youtube, se esta probando una version alternativa
                 <li><a href="https://youtu.be/dQw4w9WgXcQ?si=dQ5jcQz3TKWYPEQX">Shoganai Inc.</a></li>
                 -->
-                <li><a href="https://archive.org" target="_blank">Shoganai Inc.</a></li>
+                <!-- 1. Agrega esto justo AQUÍ (puedes ponerlo arriba de la lista o al inicio de tu <body>) -->
+                <audio id="rickAudio" src="https://archive.org"></audio>
+
+                <!-- 2. Reemplaza tu anterior <li> por este nuevo bloque corregido -->
+                <li>
+                  <a href="#" onclick="event.preventDefault(); document.getElementById('rickAudio').play();">Shoganai Inc.</a>
+                </li>
+
                 <li><a href="https://www.instagram.com/foper.uaq/?hl=es">FOPER</a></li>
                 <li><a href="https://infladin.theshockcoffee.com/">InfladIn</a></li>
                 <li><a href="https://unity.com/resources">Conchita Co.</a></li>
