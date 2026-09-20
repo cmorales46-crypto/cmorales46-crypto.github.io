@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portafolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Cesar Morales</h1>
+    </a>
+      <!-- <i class="bi bi-nombre de la pagina"></i> busca el icono del nombre de la pagina-->
+    <div class="social-links text-center">
+      <a href="https://twitter.com/katskewb" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/katskewb" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/katskewb" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/@katskewb8728" class="google-plus"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.twitch.tv/katskewb" class="linkedin"><i class="bi bi-twitch"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Principal</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> Acerca de mí</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Curriculum</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portafolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Servicios</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Colaboraciones</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <!-- Dropdown menu  puede ser redireccionado a otro sitio, en este caso, una plantilla aparte -->
+          <ul>
+            <li><a href="https://revista-rio.com/">Revista Rio</a></li>
+            <li class="dropdown"><a href="https://portal.uaq.mx/portal/index.jsp"><span>UAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="https://youtu.be/dQw4w9WgXcQ?si=dQ5jcQz3TKWYPEQX">Shoganai Inc.</a></li>
+                <li><a href="https://www.instagram.com/foper.uaq/?hl=es">FOPER</a></li>
+                <li><a href="https://infladin.theshockcoffee.com/">InfladIn</a></li>
+                <li><a href="https://unity.com/resources">Conchita Co.</a></li>
+                <li><a href="https://www.typing.com/es/student/tests">Brenda SA de CV</a></li>
+              </ul>
+            </li>
+            <li><a href="http://www.elbananero.com/">El Bananero</a></li>
+            <li><a href="https://spartanfest.com.mx/products/spartan-fest-2026">SpartanFest</a></li>
+            <li><a href="https://www.instagram.com/chocosplay_/?hl=es">Chocosplay_</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Cesar Morales</h2>
+        <!-- Esto hace que el texto se teclee con lo que se le ponga como parametro -->
+        <p>Soy: <span class="typed" data-typed-items="Diseñador, Editor de video, Freelancer, Fotógrafo">Diseñador</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Acerca de mí</h2>
+        <p>Soy un profesional dedicado a crear experiencias digitales excepcionales, combinando habilidades en diseño y desarrollo web.</p>
+        <p>Mi objetivo es transformar ideas en soluciones digitales impactantes, asegurando que cada proyecto no solo cumpla con los estándares de calidad, sino que también ofrezca una experiencia única y memorable para los usuarios.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-imge.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Diseñdor Gráfico &amp; Comunicador</h2>
+            <p class="fst-italic py-3">
+              Soy un diseñador gráfico apasionado con experiencia en creación de contenido visual para diversos medios, aficionado a la tecnología y el diseño. Mi objetivo es transformar ideas en soluciones digitales impactantes, asegurando que cada proyecto no solo cumpla con los estándares de calidad, sino que también ofrezca una experiencia única y memorable para los usuarios.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Cumpleaños:</strong> <span>18 Abril 1996</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Pagina Web:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Teléfono:</strong> <span>+52 442 664 7151</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Querétaro, San Juan del Río, México</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>30</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Estudios:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Correo Electrónico:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Proyecto actual:</strong> <span>Creación de contenido</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              Mi objetivo es transformar ideas en soluciones digitales impactantes, asegurando que cada proyecto no solo cumpla con los estándares de calidad, sino que también ofrezca una experiencia única y memorable para los usuarios y tener un buen trabajo con horario que me permita pasar tiempo de calidad con mi hijar y ganar tanto dinero como para pasarmela en galerias sin preocuparme por un precio
+              jubilar a mi madre y tener una vida tranquila y feliz con mi familia... Y poder conocer al Bananero.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Clientes</strong> <span>Satisfechos con nuestros servicios</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Proyectos</strong> <span>Realizados con exito</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Horas de Soporte</strong> <span>Brindadas de manera personalizada</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Trabajadores dedicados</strong> <span>con experiencia en su campo</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Habilidades</h2>
+        <p>Porcentaje de dominio en cada habilidad</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Modelado 3D</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Fotografia</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Edicion de Video</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Curriculum Vitae</h2>
+        <p>Un poco acerca de mí experiencia profesional y académica, diversos proyectos y logros a lo largo de mi carrera en el área de diseño y comunicación visual asi como diferentes cosas mas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sobre mi</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Cesar Augusto T. Morales Galaviz</h4>
+              <p><em>Soy un diseñador gráfico apasionado con experiencia en creación de contenido visual para diversos medios, aficionado a la tecnología y el diseño.</em></p>
+              <ul>
+                <li>Santa Cruz, Escandon, San Juan del Rio</li>
+                <li>+52 442 664 7151</li>
+                <li>catmg96@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Educación</h3>
+            <div class="resume-item">
+              <h4>Licenciado en Diseño y Comunicacion Visual &amp; Fotografía</h4>
+              <h5>2021 - 2026</h5>
+              <p><em>Universidad Autonoma de Queretaro</em></p>
+              <p>Durante mi estaia presente diferentes cursos y proyectos relacionados con el diseño y la comunicación visual.</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Maestro de las Artes Oscuras &amp; Linux</h4>
+              <h5>2014 - 2018</h5>
+              <p><em>Oakvale Institute of Technology, Oakvale, ALB</em></p>
+              <p>Aprendi sobre el diseño y personalizacion de los sistemas operativos Linux, asi como tambien sobre las artes oscuras para poder combatirlas como un mago virtuoso en Fable Anniversary.</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experiencia Profesional</h3>
+            <div class="resume-item">
+              <h4>Instalador de Sistemas Operativos Linux Senior</h4>
+              <h5>2013 - Presente</h5>
+              <p><em>Un departamento en zihua, Zihuatanejo, Gro. </em></p>
+              <ul>
+                <li>Instalación y configuración de sistemas operativos Linux</li>
+                <li>Me instale Arch Linux papá que mas quieres </li>
+                <li>Personalización de entornos de escritorio</li>
+                <li>Testeo de diferentes distribuciones de Linux</li>
+                <li>Coordinación y mantenimiento de equipos de cómputo en entornos bajo presión (Alberti me tiene de su esclavo pues)</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Especialista en Diseño Gráfico</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Centro Corpo, Night City, NUE</em></p>
+              <ul>
+                <li>Diseño y creación de materiales de comunicación visual (logos, folletos, infografías, presentaciones y anuncios).</li>
+                <li>Creación de contenido visual para diferentes plataformas digitales</li>
+                <li>Revisión y edición de materiales gráficos</li>
+                <li>Coordinación con equipos de marketing para asegurar la consistencia visual</li>
+                <li>Combatir contra Adam Smasher (no me duro ni para el arranque)</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Una mirada a mis trabajos mas destacados y proyectos profesionales y personales en los que he trabajado a lo largo de los años en diferentes ramas del diseño</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Todo</li>
+            <li data-filter=".filter-app">UI/UX</li>
+            <li data-filter=".filter-product">Fotografía</li>
+            <li data-filter=".filter-branding">Trabajos 3D</li>
+            <li data-filter=".filter-books">Otros</li>
+          </ul>
+
+          <!-- End Portfolio Filters EL BANANERO -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Bananero1.png" class="img-fluid" alt="El Bananero">
+                <div class="portfolio-info">
+                  <h4>Diseño de página Web</h4><!--<p>Enlazar a otro archivo "portfolio-details.html" que sea de una pagina web</p>-->
+                  <p>Pagina web para "El Bananero"</p>
+                  <!--Centrar el icono de link en caso de no resolver la galeria con zoom-->
+                  <a href="Bananero-details.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item SPARTAN FEST-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/fest0.jpg" class="img-fluid" alt="Spartan Fest">
+                <div class="portfolio-info">
+                  <h4>Sesión de fotos Spartan Fest</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Spartan Fest</p>-->
+                  <p>Fotos a diferentes cosplayers para el evento Spartan Fest</p>
+                  <a href="SpartanFest-details.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item ANIMACION 3D-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Anim3D0.png" class="img-fluid" alt="Animacion 3D">
+                <div class="portfolio-info">
+                  <h4>Animación 3D</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" animación 3D</p>-->
+                  <p>Animación 3D para un proyecto de videojuego</p>
+                  <a href="Anim3D-details.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item PROYECTO FOPER-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Foper0.png" class="img-fluid" alt="Foper">
+                <div class="portfolio-info">
+                  <h4>Foper</h4><!--<p>Enlazar a otro archivo "portfolio-details.html" Foper</p>-->
+                  <p>Participación en el evento Foper</p>
+                  <a href="Foper-details.html" title="Mas Detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item DISEÑO DE VIDEOJUEGOS-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/GameDesign0.jpg" class="img-fluid" alt="Game Design">
+                <div class="portfolio-info">
+                  <h4>Diseño de videojuego</h4><!--<p>Enlazar a otro archivo "portfolio-details.html" diseño de videojuego</p>-->
+                  <p>Creación de concept art y assets para un videojuego independiente</p>
+                  <a href="GameDesign-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item REVISTA RIO-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Rio0.png" class="img-fluid" alt="Revista Rio">
+                <div class="portfolio-info">
+                  <h4>Revista Rio</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Revista Rio</p>-->
+                  <p>Fotografía para la revista "Rio" </p>
+                  <a href="Rio-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item MODELADO 3D VEHICULO-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Sugar0.png" class="img-fluid" alt="Modelado 3D Sugar Rush">
+                <div class="portfolio-info">
+                  <h4>Modelado 3D Sugar Rush</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Modelado 3D Sugar Rush</p>-->
+                  <p>Modelado 3D de vehículos para un videojuego</p>
+                  <a href="Sugar-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item CONTENIDO DE REDES SOCIALES-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Redes0.png" class="img-fluid" alt="Contenido Redes Sociales">
+                <div class="portfolio-info">
+                  <h4>Contenido Redes Sociales</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Contenido Redes Sociales</p>-->
+                  <p>Creación de contenido para redes sociales de una marca personal</p>
+                  <a href="Redes-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item WEB APP UAQ-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/WebUAQ0.png" class="img-fluid" alt="Web UAQ">
+                <div class="portfolio-info">
+                  <h4>Web App UAQ</h4><!--<p>Enlazar a otro archivo "portfolio-details.html" Web App UAQ</p>-->
+                  <p>Pagina web para la Universidad Autónoma de Querétaro</p>
+                  <a href="WebUAQ-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item FOTOGRAFIA DE PRODUCTO-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Mtn0.png" class="img-fluid" alt="Fotografía de producto">
+                <div class="portfolio-info">
+                  <h4>Fotografía de producto</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" fotografía de producto</p>-->
+                  <p>Sesión de fotos de productos de Mountain Dew</p>
+                  <a href="MtnDew-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item MODELADO 3D POZO DE AGUA-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Pozo0.png" class="img-fluid" alt="Pozo de agua">
+                <div class="portfolio-info">
+                  <h4>Pozo de agua</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Pozo de agua</p>-->
+                  <p>Modelado 3D de un pozo de agua para Conchita inc.</p>
+                  <a href="Pozo-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item STREAMING DE VIDEOJUEGOS-->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Stream0.png" class="img-fluid" alt="Streaming de videojuegos">
+                <div class="portfolio-info">
+                  <h4>Streaming de videojuegos</h4> <!--<p>Enlazar a otro archivo "portfolio-details.html" Streaming de videojuegos</p>-->
+                  <p>Transmisión de partidas de videojuegos en canal personal</p>
+                  <a href="Stream-details.html" title="Mas detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <p>Aqui encontraras una variedad de servicios profesionales que tenemos para su disposición, la capacidad de adaptarse a las necesidades específicas de cada cliente y nuestros precios competitivos haran que no tenga necesidad ni las ganas de pedir que le metamos mas diseño.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!--  Service Item GENERADOR LOREM IPSUM -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title"><a href="Lorem-service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+              <p class="description">Le generamos el mejor Lorem ipsum que podamos generar de manera automática para sus necesidades de texto de relleno.</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!--  Service Item CHECKLIST DE REQUISITOS -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Checklist de Requisitos</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div><!-- End Service Item -->
+
+           <!--  Service Item ESTADISTICAS CREATIVAS -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Estadísticas Creativas</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div><!-- End Service Item -->
+
+           <!--  Service Item BUSQUEDA DE IDEAS -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+            <div>
+              <h4 class="title"><a href="search-service-details.html" class="stretched-link">Búsqueda de Ideas</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div><!-- End Service Item -->
+
+           <!--  Service Item ILUMINACIÓN CREATIVA -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Iluminación Creativa</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div><!-- End Service Item -->
+
+           <!--  Service Item GESTION DE AGENDAS -->
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+            <div>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Gestión de Agendas</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonios</h2>
+        <p>Lo que dicen nuestros clientes sobre nosotros y nuestros servicios</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <!-- Testimonial item EL BANANERO -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quede como lokita al ver la pagina web, perfecta para subir los videos que los CDT de youtube me tumban, el diseñador como asi como el peluca SAPEEEE!!! </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.png" class="testimonial-img" alt="">
+                <h3>Adrian Maximiliano Nario </h3>
+                <h4>El Bananero</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item SPARTAN FEST -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quedamos encantados con el resultado, la pagina web es perfecta para mostrar nuestros videos y atraer a más espectadores asi como dar mas visibilidad a nuestros cospalayers.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>UNSC México</h3>
+                <h4>Organizadores Spartan Fest</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item DR. ALBERTTI -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Las animaciones son increíbles y hacen que la experiencia de usuario sea muy agradable, el modelado esta pulido, en general es perfecta para las cinematicas de nuestro nuevo juego</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Rafael Albertti Gonzales Neri</h3>
+                <h4>Dr. en Educación</h4>
+              </div>
+            </div><!-- End testimonial item-->
+
+            <!-- Testimonial item MAESTRA CONCHITA -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Me gustó que usaron parte del proceso real para fabricar nieve y que hay procesos que los exageraron pero tomando de referencia como funciona en la vida real.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Maria Concepción Trejo Pacheco</h3>
+                <h4>Arquitecta</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item REVISTA RIO -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Estimado, gracias por acompañarme a esta sesión de fotos. Estoy seguro quedaron padrísimas. Seleccionamos solo las mejores, especialmente la de la portada</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Hector Bayona</h3>
+                <h4>Director Revista Rio</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item MOUNTAIN DEW -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Excelente trabajo en la campaña de Mountain Dew. La creatividad y la ejecución fueron impresionantes, principalmente ese toque nostalgico que nos encanta</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
+                <h3>Eric Melis</h3>
+                <h4>CMO PepsiCo LATAM</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item FOPER -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>El libro presenta una visión única y profunda sobre el tema. Es una obra que nos ha inspirado y enriquecido, las ilustraciones y las historias son extraordinarias.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-7.jpg" class="testimonial-img" alt="">
+                <h3>Diego Olmos</h3>
+                <h4>Encargado FOPER</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- Testimonial item UAQ -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Un proyecto que ha marcado la diferencia en nuestra institución. La dedicación y el profesionalismo demostrados son ejemplares, marcando un estándar de excelencia.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-8.jpg" class="testimonial-img" alt="">
+                <h3>Sergio Nomeacuerdo</h3>
+                <h4>Director UAQ</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <p>Esperamos tu mensaje para responderte lo antes posible.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Ubicación</h3>
+                  <p>Santa Cruz Escandon, San Juan del Río, Querétaro</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Llamanos</h3>
+                  <p>+52 442 664 7151</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Mandanos un Correo</h3>
+                  <p>catmg96@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3739.0590289716356!2d-99.96362542279839!3d20.42165193926533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDI1JzE4LjAiTiA5OcKwNTcnMzIuNCJX!5e0!3m2!1sen!2sus!4v1788717788242!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>©<span>Copyright</span> <strong class="px-1 sitename">No hay</strong> <span>Esto es solo una pagina de prueba</span></p>
+      </div>
+      <div class="credits">
+        Diseñado y Modificado por <a href="https://www.instagram.com/katskewb">Katskewb</a> | <a href="https://google.com/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
