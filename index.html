@@ -66,7 +66,12 @@
             <li><a href="https://revista-rio.com/">Revista Rio</a></li>
             <li class="dropdown"><a href="https://portal.uaq.mx/portal/index.jsp"><span>UAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="https://youtu.be/dQw4w9WgXcQ?si=dQ5jcQz3TKWYPEQX">Shoganai Inc.</a></li>
+                <!--<li><a href="https://youtu.be/dQw4w9WgXcQ?si=dQ5jcQz3TKWYPEQX">Shoganai Inc.</a></li> -->
+                <!-- 1. REPRODUCTOR OCULTO: Se carga en segundo plano y no afecta visualmente a tu menú -->
+                  <audio id="rickAudio" src="https://wikimedia.org" preload="auto"></audio>
+                <li>
+                  <a href="#" onclick="event.preventDefault(); document.getElementById('rickAudio').play();">Shoganai Inc.</a>
+                </li>
                 <li><a href="https://www.instagram.com/foper.uaq/?hl=es">FOPER</a></li>
                 <li><a href="https://infladin.theshockcoffee.com/">InfladIn</a></li>
                 <li><a href="https://unity.com/resources">Conchita Co.</a></li>
