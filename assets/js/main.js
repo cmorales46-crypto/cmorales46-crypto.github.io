@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `);
       ventanaImpresion.document.write('</style></head><body>');
       
-      // 3. Volcamos el contenido de tu CV (el HTML puro con tus textos)
+      // 3. Volcamos el contenido del CV (el HTML puro con el texto)
       ventanaImpresion.document.write(elemento.innerHTML);
       ventanaImpresion.document.write('</body></html>');
       
