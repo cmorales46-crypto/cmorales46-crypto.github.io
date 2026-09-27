@@ -834,27 +834,45 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <style>
+<style>
   @media print {
-    /* Esconde todo lo que NO sea tu CV al guardar en PDF */
+    /* 1. Escondemos absolutamente todo el cuerpo de la página eliminando su espacio */
     body * {
-      visibility: hidden;
-    }
-    #cv-content, #cv-content * {
-      visibility: visible;
-    }
-    #cv-content {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-    }
-    /* Esconde el botón dentro del PDF */
-    #download-pdf {
       display: none !important;
+    }
+    
+    /* 2. Forzamos a que el contenedor del CV y todo lo que esté adentro SÍ se muestren */
+    #cv-content, 
+    #cv-content * {
+      display: block !important;
+    }
+
+    /* 3. Mantenemos la estructura de dos columnas de Bootstrap en el PDF */
+    #cv-content .row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+    }
+    #cv-content .col-lg-6 {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+    }
+
+    /* 4. Ajustes de limpieza para evitar hojas extra */
+    html, body {
+      background: #fff !important;
+      font-size: 12pt !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    #cv-content {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 10mm !important;
     }
   }
 </style>
+
 
 
   <!-- Main JS File -->
