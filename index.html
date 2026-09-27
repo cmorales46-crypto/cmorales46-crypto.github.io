@@ -835,31 +835,38 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <style>
   @media print {
-    /* 1. Forzamos un lienzo completamente blanco de fondo */
+    /* 1. Ocultamos el resto de las secciones principales de la plantilla */
+    header, footer, nav, section:not(#cv-content), .breadcrumbs, button {
+      display: none !important;
+    }
+
+    /* 2. Forzamos que la página sea blanca y visible */
     html, body {
       background: #ffffff !important;
       color: #000000 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100% !important;
-      height: auto !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
 
-    /* 2. Convertimos el contenedor de tu CV en una capa fija flotante que tapa TODO */
+    /* 3. Forzamos a que tu sección del CV se muestre sin animaciones bloqueantes */
     #cv-content {
-      position: fixed !important;
-      left: 0 !important;
-      top: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      background: #ffffff !important; /* Capa blanca para tapar lo de atrás */
-      padding: 15mm !important;
-      box-sizing: border-box !important;
-      z-index: 9999999 !important; /* Máxima prioridad visual */
       display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      padding: 10mm !important;
+      width: 100% !important;
     }
 
-    /* 3. Forzamos a que las dos columnas se queden en horizontal lado a lado */
+    /* 4. Anulamos los efectos de desvanecimiento (AOS) de tu plantilla que ponen el texto en blanco */
+    [data-aos] {
+      pointer-events: auto !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    /* 5. Aseguramos que las dos columnas se organicen lado a lado */
     #cv-content .row {
       display: flex !important;
       flex-direction: row !important;
@@ -872,17 +879,17 @@
       max-width: 50% !important;
       width: 50% !important;
       padding: 0 15px !important;
-      box-sizing: border-box !important;
       display: block !important;
     }
 
-    /* 4. Aseguramos que los textos y títulos sean visibles */
+    /* 6. Forzamos que todas las letras y títulos sean completamente negros y visibles */
     #cv-content h3, #cv-content h4, #cv-content h5, #cv-content p, #cv-content li, #cv-content em {
       color: #000000 !important;
-      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
 
-    /* Escondemos por completo el botón de descarga en la impresión */
+    /* Ocultamos el botón para que no salga impreso */
     #download-pdf {
       display: none !important;
     }
