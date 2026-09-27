@@ -833,35 +833,33 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
   <style>
   @media print {
-    /* 1. Escondemos todas las secciones principales de la página web de forma segura */
-    header, footer, section, nav, .breadcrumbs, .sidebar, button {
-      display: none !important;
-    }
-
-    /* 2. Forzamos a que el fondo del documento completo sea blanco y limpio */
+    /* 1. Forzamos un lienzo completamente blanco de fondo */
     html, body {
       background: #ffffff !important;
       color: #000000 !important;
       margin: 0 !important;
       padding: 0 !important;
       width: 100% !important;
+      height: auto !important;
     }
 
-    /* 3. Aseguramos que el contenedor del CV ocupe toda la hoja sin restricciones */
+    /* 2. Convertimos el contenedor de tu CV en una capa fija flotante que tapa TODO */
     #cv-content {
-      display: block !important;
-      position: absolute !important;
+      position: fixed !important;
       left: 0 !important;
       top: 0 !important;
       width: 100% !important;
+      height: 100% !important;
+      background: #ffffff !important; /* Capa blanca para tapar lo de atrás */
       padding: 15mm !important;
       box-sizing: border-box !important;
+      z-index: 9999999 !important; /* Máxima prioridad visual */
+      display: block !important;
     }
 
-    /* 4. Forzamos que las columnas de Bootstrap se queden frente a frente en la hoja */
+    /* 3. Forzamos a que las dos columnas se queden en horizontal lado a lado */
     #cv-content .row {
       display: flex !important;
       flex-direction: row !important;
@@ -875,14 +873,22 @@
       width: 50% !important;
       padding: 0 15px !important;
       box-sizing: border-box !important;
+      display: block !important;
     }
 
-    /* Ocultamos específicamente el botón de descarga para que no salga impreso en tu hoja */
+    /* 4. Aseguramos que los textos y títulos sean visibles */
+    #cv-content h3, #cv-content h4, #cv-content h5, #cv-content p, #cv-content li, #cv-content em {
+      color: #000000 !important;
+      display: block !important;
+    }
+
+    /* Escondemos por completo el botón de descarga en la impresión */
     #download-pdf {
       display: none !important;
     }
   }
 </style>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
