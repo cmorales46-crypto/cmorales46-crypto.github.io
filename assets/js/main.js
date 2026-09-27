@@ -228,7 +228,7 @@
 
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
   const botonPdf = document.getElementById('download-pdf');
 
   if (botonPdf) {
@@ -238,14 +238,15 @@ document.addEventListener('DOMContentLoaded', function() {
       window.print();
     });
   }
-});
+});*/
 
+// Función para descargar el fragmento de Currículum en PDF
 document.addEventListener('DOMContentLoaded', function() {
   const botonPdf = document.getElementById('download-pdf');
 
   if (botonPdf) {
     botonPdf.addEventListener('click', function(e) {
-      e.preventDefault();
+      e.preventDefault(); // Evita recargas o comportamientos extraños en la web
       
       const elemento = document.getElementById('cv-content');
       
@@ -254,18 +255,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // 1. Creamos una ventana temporal en el navegador
-      const ventanaImpresion = window.open('', '_blank', 'height=600,width=800');
+      // 1. Abrimos una pestaña temporal limpia en el navegador
+      const ventanaImpresion = window.open('', '_blank', 'height=700,width=900');
       
-      // 2. Le inyectamos una estructura HTML limpia con estilos básicos para el PDF
+      // 2. Inyectamos la estructura HTML y los estilos limpios de impresión
       ventanaImpresion.document.write('<html><head><title>CV Cesar Morales</title>');
       ventanaImpresion.document.write('<style>');
       ventanaImpresion.document.write(`
         body { 
-          font-family: Arial, sans-serif; 
+          font-family: 'Helvetica Neue', Arial, sans-serif; 
           color: #333333; 
           margin: 20px; 
           padding: 0;
+          background: #ffffff;
         }
         .row { 
           display: flex !important; 
@@ -284,30 +286,83 @@ document.addEventListener('DOMContentLoaded', function() {
           color: #0563bb; 
           border-bottom: 2px solid #0563bb; 
           padding-bottom: 5px; 
-          margin-top: 20px;
+          margin-top: 25px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
         .resume-item { 
-          margin-bottom: 15px; 
+          padding: 0 0 20px 20px;
+          margin-top: -2px;
+          border-left: 2px solid #1f5297;
+          position: relative;
         }
-        h4 { font-size: 12pt; margin: 5px 0; color: #111; }
-        h5 { font-size: 10pt; background: #eef7ff; padding: 2px 5px; display: inline-block; margin: 5px 0; }
-        p, li { font-size: 10pt; line-height: 1.4; }
-        ul { padding-left: 20px; }
+        .resume-item::before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          border-2px: 2px solid #1f5297;
+          background: #fff;
+          border-radius: 50%;
+          left: -9px;
+          top: 0;
+        }
+        .resume-item h4 { 
+          font-size: 12pt; 
+          margin: 0 0 5px 0; 
+          color: #111111; 
+          font-weight: bold;
+        }
+        .resume-item h5 { 
+          font-size: 10pt; 
+          background: #eef7ff; 
+          padding: 2px 10px; 
+          display: inline-block; 
+          margin: 5px 0; 
+          font-weight: 600;
+        }
+        p, li { 
+          font-size: 10pt; 
+          line-height: 1.5; 
+          margin-bottom: 8px;
+        }
+        ul { 
+          padding-left: 20px; 
+          margin-top: 5px;
+        }
+        li {
+          margin-bottom: 4px;
+        }
+        em {
+          font-style: italic;
+          color: #555555;
+        }
       `);
       ventanaImpresion.document.write('</style></head><body>');
       
-      // 3. Metemos el HTML de tu CV (sin animaciones AOS ni estilos rotos de la web)
+      // 3. Volcamos el contenido de tu CV (el HTML puro con tus textos)
       ventanaImpresion.document.write(elemento.innerHTML);
       ventanaImpresion.document.write('</body></html>');
       
-      ventanaImpresion.document.close(); // Cerramos la escritura del documento
-      ventanaImpresion.focus(); // Enfocamos la nueva ventana
+      // 4. Cerramos la edición del documento para avisar al navegador
+      ventanaImpresion.document.close(); 
+      ventanaImpresion.focus();
 
-      // 4. Esperamos una milésima de segundo a que cargue el texto y disparamos la impresión
+      // 5. Esperamos de forma segura a que los elementos estén completamente dibujados
+      ventanaImpresion.onload = function() {
+        setTimeout(function() {
+          ventanaImpresion.print();
+          ventanaImpresion.close();
+        }, 800); // Pausa de sincronización para que la previsualización no salga en blanco
+      };
+
+      // Respaldo de seguridad por si el navegador bloquea la acción nativa 'onload'
       setTimeout(function() {
-        ventanaImpresion.print();
-        ventanaImpresion.close(); // Cierra la pestaña temporal automáticamente después de guardar
-      }, 250);
+        if (!ventanaImpresion.closed) {
+          ventanaImpresion.print();
+          ventanaImpresion.close();
+        }
+      }, 1200);
     });
   }
 });
