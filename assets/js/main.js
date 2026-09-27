@@ -227,3 +227,38 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+  // Esperamos a que todo el HTML esté cargado en el navegador
+  document.addEventListener('DOMContentLoaded', function() {
+    const boton = document.getElementById('download-pdf');
+    
+    if (boton) {
+      boton.addEventListener('click', function() {
+        const elemento = document.getElementById('cv-content');
+        
+        if (!elemento) {
+          alert('Error: No se encontró el contenedor "cv-content". Revisa el ID en tu HTML.');
+          return;
+        }
+
+        // Configuración para asegurar compatibilidad en GitHub Pages
+        const opciones = {
+          margin:       15,
+          filename:     'cv_cesar_morales.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2, useCORS: true, logging: true }, 
+          jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Intentar descargar
+        html2pdf().set(opciones).from(elemento).save()
+          .catch(err => {
+            console.error(err);
+            alert('Error al generar el PDF: ' + err.message);
+          });
+      });
+    } else {
+      console.error('No se encontró el botón con ID "download-pdf"');
+    }
+  });
+
