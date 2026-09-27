@@ -27,6 +27,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Pon esto en tu <head> -->
+<script src="https://cloudflare.com"></script>
 
 </head>
 
@@ -273,6 +275,11 @@
         <p>Un poco acerca de mí experiencia profesional y académica, diversos proyectos y logros a lo largo de mi carrera en el área de diseño y comunicación visual asi como diferentes cosas mas.</p>
       </div><!-- End Section Title -->
 
+      <!-- Pon el botón justo antes de tu <div class="container"> -->
+        <button id="download-pdf" style="margin: 20px; padding: 10px 20px; background-color: #0563bb; color: white; border: none; cursor: pointer; border-radius: 4px;">
+           Descargar CV en PDF
+        </button>
+    <div class="container" id="cv-content">
       <div class="container">
 
         <div class="row">
@@ -340,6 +347,7 @@
         </div>
 
       </div>
+  </div>
 
     </section><!-- /Resume Section -->
 
@@ -832,6 +840,25 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  document.getElementById('download-pdf').addEventListener('click', () => {
+    const elemento = document.getElementById('cv-content');
+    
+    // Configuración del PDF
+    const opciones = {
+      margin:       10,
+      filename:     'cv_cesar_morales.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 }, // Aumenta la calidad del renderizado
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Ejecuta la conversión y descarga
+    html2pdf().set(opciones).from(elemento).save();
+  });
+</script>
+
 
 </body>
 
