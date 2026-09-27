@@ -833,44 +833,28 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <!-- Pon esto en tu <head> -->
-  <script src="https://cloudflare.com"></script>
 
-<script>
-  // Esperamos a que todo el HTML esté cargado en el navegador
-  document.addEventListener('DOMContentLoaded', function() {
-    const boton = document.getElementById('download-pdf');
-    
-    if (boton) {
-      boton.addEventListener('click', function() {
-        const elemento = document.getElementById('cv-content');
-        
-        if (!elemento) {
-          alert('Error: No se encontró el contenedor "cv-content". Revisa el ID en tu HTML.');
-          return;
-        }
-
-        // Configuración para asegurar compatibilidad en GitHub Pages
-        const opciones = {
-          margin:       15,
-          filename:     'cv_cesar_morales.pdf',
-          image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2, useCORS: true, logging: true }, 
-          jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        // Intentar descargar
-        html2pdf().set(opciones).from(elemento).save()
-          .catch(err => {
-            console.error(err);
-            alert('Error al generar el PDF: ' + err.message);
-          });
-      });
-    } else {
-      console.error('No se encontró el botón con ID "download-pdf"');
+  <style>
+  @media print {
+    /* Esconde todo lo que NO sea tu CV al guardar en PDF */
+    body * {
+      visibility: hidden;
     }
-  });
-</script>
+    #cv-content, #cv-content * {
+      visibility: visible;
+    }
+    #cv-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    /* Esconde el botón dentro del PDF */
+    #download-pdf {
+      display: none !important;
+    }
+  }
+</style>
 
 
   <!-- Main JS File -->

@@ -227,3 +227,16 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const botonPdf = document.getElementById('download-pdf');
+
+  if (botonPdf) {
+    botonPdf.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Llama a la ventana de impresión nativa del navegador
+      window.print();
+    });
+  }
+});
+
