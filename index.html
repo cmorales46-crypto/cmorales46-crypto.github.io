@@ -837,27 +837,45 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <script>
-  document.getElementById('download-pdf').addEventListener('click', () => {
-    const elemento = document.getElementById('cv-content');
+<script>
+  // Esperamos a que todo el HTML esté cargado en el navegador
+  document.addEventListener('DOMContentLoaded', function() {
+    const boton = document.getElementById('download-pdf');
     
-    // Configuración del PDF
-    const opciones = {
-      margin:       10,
-      filename:     'cv_cesar_morales.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 }, // Aumenta la calidad del renderizado
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
+    if (boton) {
+      boton.addEventListener('click', function() {
+        const elemento = document.getElementById('cv-content');
+        
+        if (!elemento) {
+          alert('Error: No se encontró el contenedor "cv-content". Revisa el ID en tu HTML.');
+          return;
+        }
 
-    // Ejecuta la conversión y descarga
-    html2pdf().set(opciones).from(elemento).save();
+        // Configuración para asegurar compatibilidad en GitHub Pages
+        const opciones = {
+          margin:       15,
+          filename:     'cv_cesar_morales.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2, useCORS: true, logging: true }, 
+          jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Intentar descargar
+        html2pdf().set(opciones).from(elemento).save()
+          .catch(err => {
+            console.error(err);
+            alert('Error al generar el PDF: ' + err.message);
+          });
+      });
+    } else {
+      console.error('No se encontró el botón con ID "download-pdf"');
+    }
   });
 </script>
 
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
