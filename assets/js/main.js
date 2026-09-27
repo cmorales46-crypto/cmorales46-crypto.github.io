@@ -228,7 +228,7 @@
 
 })();
 
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const botonPdf = document.getElementById('download-pdf');
 
   if (botonPdf) {
@@ -238,7 +238,7 @@
       window.print();
     });
   }
-});*/
+});
 
 // Función para descargar el fragmento de Currículum en PDF
 document.addEventListener('DOMContentLoaded', function() {
