@@ -240,3 +240,77 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const botonPdf = document.getElementById('download-pdf');
+
+  if (botonPdf) {
+    botonPdf.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const elemento = document.getElementById('cv-content');
+      
+      if (!elemento) {
+        alert('Error: No se encontró el contenedor con id="cv-content"');
+        return;
+      }
+
+      // 1. Creamos una ventana temporal en el navegador
+      const ventanaImpresion = window.open('', '_blank', 'height=600,width=800');
+      
+      // 2. Le inyectamos una estructura HTML limpia con estilos básicos para el PDF
+      ventanaImpresion.document.write('<html><head><title>CV Cesar Morales</title>');
+      ventanaImpresion.document.write('<style>');
+      ventanaImpresion.document.write(`
+        body { 
+          font-family: Arial, sans-serif; 
+          color: #333333; 
+          margin: 20px; 
+          padding: 0;
+        }
+        .row { 
+          display: flex !important; 
+          flex-direction: row !important; 
+          width: 100%;
+        }
+        .col-lg-6 { 
+          flex: 0 0 50% !important; 
+          max-width: 50% !important; 
+          width: 50%; 
+          padding: 0 15px; 
+          box-sizing: border-box;
+        }
+        h3.resume-title { 
+          font-size: 16pt; 
+          color: #0563bb; 
+          border-bottom: 2px solid #0563bb; 
+          padding-bottom: 5px; 
+          margin-top: 20px;
+        }
+        .resume-item { 
+          margin-bottom: 15px; 
+        }
+        h4 { font-size: 12pt; margin: 5px 0; color: #111; }
+        h5 { font-size: 10pt; background: #eef7ff; padding: 2px 5px; display: inline-block; margin: 5px 0; }
+        p, li { font-size: 10pt; line-height: 1.4; }
+        ul { padding-left: 20px; }
+      `);
+      ventanaImpresion.document.write('</style></head><body>');
+      
+      // 3. Metemos el HTML de tu CV (sin animaciones AOS ni estilos rotos de la web)
+      ventanaImpresion.document.write(elemento.innerHTML);
+      ventanaImpresion.document.write('</body></html>');
+      
+      ventanaImpresion.document.close(); // Cerramos la escritura del documento
+      ventanaImpresion.focus(); // Enfocamos la nueva ventana
+
+      // 4. Esperamos una milésima de segundo a que cargue el texto y disparamos la impresión
+      setTimeout(function() {
+        ventanaImpresion.print();
+        ventanaImpresion.close(); // Cierra la pestaña temporal automáticamente después de guardar
+      }, 250);
+    });
+  }
+});
+
+
+
